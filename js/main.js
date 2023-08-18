@@ -1,37 +1,48 @@
-// confirm("Adivinaremos que pokemon elegiste a partir de preguntas")
+const productos = [
+    {nombre:"Dados Gatitos", precio:600},
+    {nombre:"Dados Obsidiana", precio:600},
+    {nombre:"Dados Arcoiris", precio:600},
+    {nombre:"Dados Galaxia", precio:600},
+    {nombre:"Dados Noche", precio:600},
+    {nombre:"Dados Zelda", precio:600},
+]
 
+let carrito = [];
+let nombreDados = "";
 
-// window.onload = function saberPokemon() {
-//     let pregunta1;
-//     let pregunta2;
-  
-//     do {
-//       pregunta1 = prompt("¿Tu Pokémon tiene cola?").toUpperCase();
-  
-//       if (pregunta1 === "SI") {
-//         pregunta2 = prompt("Tu pokemon tiene colmillos?").toUpperCase();
-//       } else if (pregunta1 === "NO") {
-//         alert("Tu Pokémon se llama Bulbasaur");
-//         break;
-//       } else {
-//         alert("Por favor, responde 'SI' o 'NO'.");
-//       }
-//     } while (pregunta1 !== "SI" && pregunta1 !== "NO");
+for (const nombres of productos) {
+   nombreDados += nombres.nombre + "\n" ;
+}
 
-//     if(pregunta1 !=="NO"){
-//             do{   
-//     pregunta3 = prompt("Estas seguro?").toUpperCase();// esta pregunta la tuve que poner sino mi segundo while se hacia un bucle infinito...
-//     if (pregunta2 === "SI") {
-//       alert("Tu Pokémon se llama Charmander");
-//       break;
-//     } else if (pregunta2 === "NO") {
-//       alert("Tu Pokémon se llama Squirtle");
-//       break;
-//     }else{
-//         alert("Por favor, responde 'SI' o 'NO'.")
-//     }
-    
-//     } while (pregunta2 !== "SI" && pregunta2 !== "NO")
-//     }
-//   };
-  
+let elegirMasDados = true;
+
+while(elegirMasDados){
+    let elegirDado = prompt("Nombres de los dados disponibles: \n" + nombreDados + "terminar")
+
+    if (elegirDado.toLowerCase() === 'terminar') {
+        elegirMasDados = false;
+        }else {
+            let productoEncontrado = productos.find(producto => producto.nombre === elegirDado);
+        
+
+        if (productoEncontrado) {
+            carrito.push(productoEncontrado);
+        alert(`Dado ${elegirDado} agregado al carrito.`);
+    }else{
+        alert("Nombre de dado no válido. Por favor, elige un nombre válido o escribe 'terminar' para finalizar.")
+        }
+    }
+}
+
+let total = 0;
+
+let carritoTexto = "Has terminado de agregar dados al carrito. Aquí está tu carrito:\n";
+
+for (const producto of carrito) {
+    carritoTexto += `${producto.nombre} Precio: ${producto.precio}\n`;
+    total += producto.precio;
+}
+
+carritoTexto += `Total: ${total}`;
+
+alert(carritoTexto)
