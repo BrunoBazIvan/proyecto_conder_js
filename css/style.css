@@ -57,3 +57,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* filtro  del buscador*/
+.filtro{
+    display: none;
+}
