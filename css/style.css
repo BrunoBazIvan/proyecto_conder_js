@@ -62,3 +62,74 @@ body {
 .filtro{
     display: none;
 }
+
+/* container row */
+
+.contenedorItems{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px;
+    width: 16rem;
+}
+
+/* Drop Down*/
+
+.dropDown-btn{
+
+    background-color: rgba(127, 255, 212, 0);
+    color: white;
+    padding: 12px;
+    border: solid rgb(80, 80, 80) 1px;
+    border-radius: 10px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.dropDown{
+    position: relative;
+    display:inline-block;
+}
+.dropDown-content{
+    display: none;
+    position: absolute;
+    background-color: gainsboro;
+    min-width: 160px;
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.712);
+}
+.dropDown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block  ;
+}
+
+.dropDown-content a:hover{
+    background-color: #f1f1f1;
+}
+
+.dropDown:hover .dropDown-btn{
+    border: rgb(70, 153, 207) solid 1px;
+    box-shadow: 0 0 5px 5px rgb(43, 79, 104);
+}
+
+.dropDown:hover .dropDown-content{
+    display: block;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+}
+.footer{
+    margin-top: 30px;
+    padding: 5px;
+    font-size: large;
+    color: #f1f1f1;
+}
