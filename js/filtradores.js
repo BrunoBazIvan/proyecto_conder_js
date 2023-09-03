@@ -70,7 +70,3 @@ dropDown.addEventListener("click", () =>{
         })
     }
 });
-
-  
-
-  

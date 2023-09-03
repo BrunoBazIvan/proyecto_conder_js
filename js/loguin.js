@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
 
-    const btn = document.getElementById("login");
-
+    let btn = document.getElementById("boton");
+    
     btn.addEventListener("click", function () {
 // se obtiene el valor ingresado en el por el usuario de nombre.
     const user = document.getElementById("nombre").value;
@@ -33,3 +33,10 @@ document.addEventListener("DOMContentLoaded", function (){
           }
     });
 });
+
+const isSessionActive = localStorage.setItem("user", user);
+  
+  // Redirigir según la condición
+  if (!isSessionActive) {
+    window.location.href = 'login.html';
+}
