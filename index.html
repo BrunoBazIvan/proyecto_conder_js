@@ -33,9 +33,16 @@
                         <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5Zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0ZM14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
                       </svg>
                         </button>
-                        <div class="dropDown-content">
-
-                </div>
+                        <div class="dropDown-content" id="dropDown">
+                            <div id="divDadosCheck">
+                                <label for="Dados">Dados</label>
+                                <input type="checkbox" name="filtroDados" id="filtroDados">
+                            </div>
+                            <div id="divMinisCheck">
+                                <label for="Minis">Minis</label>
+                                <input type="checkbox" name="filtroMinis" id="filtroMinis">
+                            </div>
+                        </div>
               </div>
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="buscador">
 
@@ -50,7 +57,7 @@
         </div>
         <div class="contenedorItems">
             <div >
-                <div class="card text-center  articulo" >
+                <div class="card text-center  articulo dado" id="Producto 1">
                     <img src="img/Raised Fantastic Glass DnD Dice Set Cat Butt Dice (1).jpeg" class="card-img-top" alt="dados de gatito">
                     <div class="card-body ">
                     <h5 class="card-title">Gatitos</h5>
@@ -60,7 +67,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center articulo" >
+                <div class="card text-center articulo dado" id="Producto 2">
                     <img src="img/Full Set Obsidian DnD Dice Set  - Raised Dice for Dungeons and Dragon, RPG Game Plating Numbe Artifi (1).jpeg" class="card-img-top" alt="dados de obsidiana">
                     <div class="card-body ">
                     <h5 class="card-title">Obsidiana</h5>
@@ -70,7 +77,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo dado" id="Producto 3">
                     <img src="img/Hand Painted Cosmo Dice __ URWizards.jpeg" class="card-img-top" alt="dados de Cosmos">
                     <div class="card-body ">
                     <h5 class="card-title">Cosmos</h5>
@@ -80,7 +87,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center articulo" >
+                <div class="card text-center articulo dado" id="Producto 4">
                     <img src="img/Purple Glitter Resin Galaxy Dice Moon DnD D&D Dice Set.jpeg" class="card-img-top" alt="dados de Galaxy">
                     <div class="card-body ">
                     <h5 class="card-title">Galaxy</h5>
@@ -90,7 +97,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center articulo">
+                <div class="card text-center articulo dado" id="Producto 5">
                     <img src="img/Set completo Obsidian Set  Dadi in rilievo per Dungeons and - Etsy Italia.jpeg" class="card-img-top" alt="dados de Obsidian">
                     <div class="card-body ">
                     <h5 class="card-title">Oscuros</h5>
@@ -100,7 +107,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo dado" id="Producto 6">
                     <img src="img/Full Set Dichroic Glass Polyhedral Dice Set Gemstone DnD Dice Set  -  Dungeons and Dragons DND YEET & OOF (1).jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Arcoiris</h5>
@@ -110,7 +117,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 7">
                     <img src="img/mini 1.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Trasgo ladron</h5>
@@ -120,7 +127,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 8">
                     <img src="img/mini 2.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Enano Guerrero</h5>
@@ -130,7 +137,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 9">
                     <img src="img/mini 3.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Enano Barbaro</h5>
@@ -140,7 +147,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 10">
                     <img src="img/mini 4.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Enana Barda</h5>
@@ -150,7 +157,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 11">
                     <img src="img/mini 5.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Enano Montado</h5>
@@ -160,7 +167,7 @@
             </div>
         </div>
             <div >
-                <div class="card text-center  articulo " >
+                <div class="card text-center  articulo mini" id="Producto 12">
                     <img src="img/mini 6.jpeg" class="card-img-top" alt="dados de Arcoiris">
                     <div class="card-body ">
                     <h5 class="card-title">Mujer Lagarto</h5>
