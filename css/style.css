@@ -65,7 +65,7 @@ body {
 
 /* container row */
 
-.contenedorItems{
+#contenedorItems{
 width: 100%;
 display: flex;
 flex-wrap: wrap;

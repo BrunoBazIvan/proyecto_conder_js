@@ -49,24 +49,24 @@ checkMinis.addEventListener('click', function() {
 
 // Obtener las casillas de verificación y las tarjetas
 // Evento change para divMinisCheck
-let dropDown = document.getElementById("dropDown");
-dropDown.addEventListener("click", () =>{
-    let listaDados = document.querySelectorAll('.dado');
-    let listaMinis = document.querySelectorAll('.mini');
-    if (checkDados.checked){
-        listaMinis.forEach((mini) =>{
-            mini.style.display= "none";
-        });
-    } else if (checkMinis.checked){
-        listaDados.forEach((dado) =>{
-            dado.style.display= "none";
-        })
-    } else if ((checkDados.checked && checkMinis.checked) || (!checkDados.checked && !checkMinis.checked)){
-        listaDados.forEach((dado) =>{
-            dado.style.display= "block";
-        })
-        listaMinis.forEach((mini) => {
-            mini.style.display= "block";
-        })
-    }
-});
+// let dropDown = document.getElementById("dropDown");
+// dropDown.addEventListener("click", () =>{
+//     let listaDados = document.querySelectorAll('.dado');
+//     let listaMinis = document.querySelectorAll('.mini');
+//     if (checkDados.checked){
+//         listaMinis.forEach((mini) =>{
+//             mini.style.display= "none";
+//         });
+//     } else if (checkMinis.checked){
+//         listaDados.forEach((dado) =>{
+//             dado.style.display= "none";
+//         })
+//     } else if ((checkDados.checked && checkMinis.checked) || (!checkDados.checked && !checkMinis.checked)){
+//         listaDados.forEach((dado) =>{
+//             dado.style.display= "block";
+//         })
+//         listaMinis.forEach((mini) => {
+//             mini.style.display= "block";
+//         })
+//     }
+// });
