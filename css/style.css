@@ -17,6 +17,7 @@ body {
 .tituloIndex {
     font-family: 'MedievalSharp', cursive;
     text-shadow:  5px 5px 5px black;
+    text-align: center;
 }
 .container-titulo{
     background-image: url(../img/Fondo/9\ hermosas\ texturas\ de\ madera\ gratis.jpeg);
@@ -78,53 +79,48 @@ flex-wrap: wrap;
 
 /* Drop Down*/
 
-.dropDown-btn{
+  /* Estilo base para la sección */
+  .select{
+    padding: 5px;
+    background-color: #1a1d20; 
+    border: 1px solid #696969; /* Borde gris claro */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave para la sombra */
+    cursor: pointer; 
+    color:#a09f9f;
+    font-family: 'MedievalSharp', cursive;
+  }
 
-    background-color: rgba(127, 255, 212, 0);
-    color: white;
-    padding: 12px;
-    border: solid rgb(80, 80, 80) 1px;
-    border-radius: 10px;
-    width: 60px;
-    margin-right: 10px;
-}
+  /* Estilo para la sombra cuando se pasa el cursor por encima */
+  .select:hover {
+    box-shadow: 0 0 10px rgba(60, 60, 196, 0.589); /* Sombra azul al pasar por encima */
+  }
 
+  .select:focus {
+    border-color: rgba(60, 60, 196, 0.589);
+    outline:rgba(60, 60, 196, 0.589) ; 
+  }
+
+  .opcion{
+    font-family: 'MedievalSharp', cursive;
+  }
 .dropDown{
     position: relative;
     display:inline-block;
+    margin-right: 10px;
+    margin-top: 2px;
 }
-.dropDown-content{
-    display: none;
-    position: absolute;
-    background-color: gainsboro;
-    min-width: 160px;
+
+
+
+
+.dropDown:hover{
+    
     border: rgb(70, 153, 207) solid 1px;
     box-shadow: 0 0 5px 5px rgb(43, 79, 104);
-    border-radius: 7%;
-}
-.dropDown-content div{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block  ;
-    font-size: larger;
-    font-family: 'MedievalSharp', cursive;
+    cursor:pointer;
 }
 
 
-.dropDown-content div:hover{
-    background-color: #f1f1f1;
-    border-radius: 7%;
-}
-
-.dropDown:hover .dropDown-btn{
-    border: rgb(70, 153, 207) solid 1px;
-    box-shadow: 0 0 5px 5px rgb(43, 79, 104);
-}
-
-.dropDown:hover .dropDown-content{
-    display: block;
-}
 
 /* footer*/
 footer{
