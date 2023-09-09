@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Verifica si hay un usuario almacenado en localStorage
+  const nombreUsuarioRecordado = localStorage.getItem("nombreUsuario");
+  const nombreUsuario = sessionStorage.getItem("nombreUsuario");
+  // Si no hay un usuario almacenado, redirige a login.html
+  if (!nombreUsuarioRecordado && !nombreUsuario ) {
+    window.location.href = "login.html";
+  }
+
+
+
+});
 class Producto {
     constructor (idProducto, imgProducto, nombreProducto, descripcionProducto, claseProducto){
         this.idProducto = idProducto
@@ -66,6 +78,7 @@ let mostrarProductos = (categoria) =>{
       });
     };
   
+
     // Inicialmente, muestra todos los productos
     mostrarProductos("todos");
 
@@ -76,3 +89,5 @@ let mostrarProductos = (categoria) =>{
     
 mostrarProductos(productosDados);
 mostrarProductos(productosFiguras);
+
+
