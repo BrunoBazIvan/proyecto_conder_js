@@ -30,7 +30,11 @@ const botonEnviar = document.getElementById('boton')
             }
             window.location.href = "index.html"
         }else{
-            alert("datos incorectos");
+            swal('Upss', 'Contraseña o Usuario muy corto', 'error',{
+                buttons: {
+                    defeat: "Volver a intentar",
+                  },
+            });
         }
     })
   
