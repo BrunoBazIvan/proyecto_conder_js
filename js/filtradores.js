@@ -1,8 +1,5 @@
-import { productosMostrados } from './main.js'
 
 const articulos = document.querySelectorAll(".articulo");
-
-
 
 document.addEventListener("keyup", e => {
     if (e.target.matches("#buscador")) {

@@ -6,6 +6,7 @@
     <title>Hola</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +49,21 @@
         </div>
         <div id="contenedorItems">
         </div>
+        <div class="containerCarrito">
+          <h2 class="tituloCarrito">Carrito de Compras</h2>
+            <ul id="carrito" class="diamond-list">
+              <!-- Los productos seleccionados se agregarán aquí -->
+             </ul>
+
+            <p class="total">Total: $<span id="total">0.00</span></p>
+            <div>
+              <button id="vaciarCarrito" class="btn btn-danger">Vaciar Carrito</button>
+              <button id="comprar" class="btn btn-primary">Comprar</button>
+            </div>
+
+        </div>
       </main>
+
       <footer>
         <h2 class="footer">El emporio del dado magico</h2>
       </footer>
