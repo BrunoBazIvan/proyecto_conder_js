@@ -77,7 +77,6 @@ flex-wrap: wrap;
     width: 16rem;
 }
 
-/* Drop Down*/
 
   /* Estilo base para la sección */
   .select{
@@ -134,4 +133,60 @@ footer{
     padding: 5px;
     font-size: large;
     color: #f1f1f1;
+}
+/* estilos tablas ayudas de master */
+
+/* Estilo de las celdas de la tabla */
+thead{
+    background-color: #d2b48c;
+    font-family:"MedievalSharp", cursive;
+}
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    margin: 20px;
+}
+
+/* Estilo de las celdas de la tabla */
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para filas impares */
+tbody tr:nth-child(odd) {
+    background-color: #d2b48c; /* Marrón claro */
+}
+
+/* Estilo para filas pares */
+tbody tr:nth-child(even) {
+    background-color: #f5deb3; /* Beige oscuro */
+}
+
+/* Estilo para las celdas de imagen (oculta la imagen por defecto) */
+td img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Efecto hover (muestra la imagen al pasar el cursor) */
+tbody tr:hover {
+    background-color: #a0522d; /* Marrón más oscuro en hover */
+    color: #ffffff; /* Texto blanco en hover */
+}
+
+tbody tr:hover td img {
+    transition: 0.3s;
+}
+
+.titulo {
+     font-family: 'MedievalSharp', cursive;
+    text-shadow:  5px 5px 5px black;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+    
 }

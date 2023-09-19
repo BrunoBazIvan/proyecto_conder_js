@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   // Verifica si hay un usuario almacenado en localStorage
   const nombreUsuarioRecordado = localStorage.getItem("nombreUsuario");
@@ -6,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!nombreUsuarioRecordado && !nombreUsuario ) {
     window.location.href = "login.html";
   }
-
-
-
+  
 });
 class Producto {
     constructor (idProducto, imgProducto, nombreProducto, descripcionProducto, claseProducto){
@@ -47,10 +46,11 @@ const contenedorItems = document.getElementById ('contenedorItems');
   categoriaDropdown.addEventListener('change', () => {
     mostrarProductos(categoriaDropdown.value);
   });
-  
-let mostrarProductos = (categoria) =>{
-    contenedorItems.innerHTML = "";
-    let productosMostrados = [];
+
+  let productosMostrados = [];
+
+  let mostrarProductos = (categoria) => {
+    contenedorItems.innerHTML = "";    
     if (categoria === "todos") {
       // Muestra todos los productos
       productosMostrados = [...productosDados, ...productosFiguras];
@@ -61,33 +61,23 @@ let mostrarProductos = (categoria) =>{
       // Muestra productos de la categoría "figuras"
       productosMostrados = productosFiguras;
     }
-    let contenidoDeCategoria = "";
     productosMostrados.forEach((producto) => {
-        contenedorItems.innerHTML += `
-          <div id="${producto.idProducto}">
-            <div class="card text-center articulo ${producto.claseProducto}">
-              <img src="${producto.imgProducto}" class="card-img-top" alt="${producto.nombreProducto}">
-              <div class="card-body ">
-                <h5 class="card-title">${producto.nombreProducto}</h5>
-                <p class="card-text">${producto.descripcionProducto}</p>
-                <a href="#" class="btn btn-primary" data-id="5">Añadir al carrito</a>
+      const div = document.createElement("div");
+      div.innerHTML += `
+              <div class="card text-center articulo ${producto.claseProducto}">
+                <img src="${producto.imgProducto}" class="card-img-top" alt="${producto.nombreProducto}">
+                <div class="card-body ">
+                  <h5 class="card-title">${producto.nombreProducto}</h5>
+                  <p class="card-text">${producto.descripcionProducto}</p>
+                  <button id="${producto.imgProducto}" class="btn btn-primary" data-id="5">Añadir al carrito</button>
+                </div>
               </div>
-            </div>
-          </div>
-        `;
-      });
-    };
+          `;
+      contenedorItems.appendChild(div);
+    });
+  };
   
-
-    // Inicialmente, muestra todos los productos
-    mostrarProductos("todos");
-
+  // Inicialmente, muestra todos los productos
+  mostrarProductos("todos");
   
-  
-  
-    contenedorItems.innerHTML += contenidoDeCategoria;
-    
-mostrarProductos(productosDados);
-mostrarProductos(productosFiguras);
-
-
+  export { productosMostrados };

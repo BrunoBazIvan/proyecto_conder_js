@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- fuentes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Ayudas para master</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=PT+Serif&display=swap" rel="stylesheet">
 </head>
-<body >
-    <!-- Header -->
+<body>
+       <!-- Header -->
 
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+       <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,7 +23,9 @@
               <i class="bi bi-house-door"></i> <!-- Ícono al inicio -->
               El Emporio del Dado Mágico
             </a>
-            <a  class="link" href="moustros.html">Ayudas para Masters</a>
+            <a class="link" href="moustros.html">
+                Ayudas para Masters
+            </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
             <form class="d-flex" role="search"> 
 
@@ -41,20 +42,32 @@
           </div>
         </div>
       </nav>
-      <!-- main -->
-      <main class="container fondo ">
+    <main  class="container fondo ">
         <div class="container-titulo">
-            <h1 class="tituloIndex">El Emporio del Dado Magico</h1>
+             <h1 class="titulo">Lista de Moustros</h1>
         </div>
-        <div id="contenedorItems">
-        </div>
-      </main>
-      <footer>
-        <h2 class="footer">El emporio del dado magico</h2>
-      </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/filtradores.js"></script>
-
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Vida</th>
+                <th>Fuerza</th>
+                <th>Desteresa</th>
+                <th>Constitucion</th>
+                <th>Inteligencia</th>
+                <th>Sabiduria</th>
+                <th>Charisma</th>
+                <th>Clase de armadura</th>
+                <th>Alineamiento</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody id="listaMoustros">
+            <!-- aqui iran los datos :) -->
+        </tbody>
+    </table>
+</main>
+    <script src="js/api.js"></script>
 </body>
 </html>
