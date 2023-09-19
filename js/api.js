@@ -57,7 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(data.image){
                     img.src = "https://www.dnd5eapi.co" + data.image;
                     img.alt = data.name;
-                    imagen.appendChild(img); // Cambia 'imagenElement' a 'img'
+                    imagen.appendChild(img);
+                }else if (!data.image){
+                    img.src = "https://cdn-icons-png.flaticon.com/256/218/218151.png"
+                    img.alt =data.name
+                    imagen.appendChild(img);
                 }
                 
 
